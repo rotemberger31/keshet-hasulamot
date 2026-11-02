@@ -1,0 +1,61 @@
+.strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chip {
+  min-width: 46px;
+  padding: 5px 8px 4px;
+  border-radius: 12px;
+  background: var(--c);
+  color: var(--on-note);
+  text-align: center;
+  line-height: 1.1;
+  border: 2px solid transparent;
+  opacity: 0.8;
+  transition: transform 0.1s, opacity 0.1s;
+}
+
+.chip b {
+  display: block;
+  font-family: var(--f-display);
+  font-weight: 600;
+  font-size: 1.02rem;
+}
+
+.chip span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.rest {
+  background: transparent;
+  border: 2px dashed var(--line);
+  color: var(--muted);
+  opacity: 0.7;
+}
+
+.cur {
+  opacity: 1;
+  transform: translateY(-3px) scale(1.08);
+  border-color: var(--ink);
+}
+
+.hit {
+  box-shadow: 0 0 0 3px var(--hit);
+}
+
+.dense .chip {
+  min-width: 34px;
+  padding: 3px 4px;
+}
+
+.dense .chip b {
+  font-size: 0.85rem;
+}
+
+.dense .chip span {
+  display: none;
+}

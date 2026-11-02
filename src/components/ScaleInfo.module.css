@@ -1,0 +1,68 @@
+.desc {
+  margin: 4px 0 0;
+  max-width: 65ch;
+}
+
+.steps {
+  display: flex;
+  gap: 4px;
+}
+
+.steps div {
+  flex-basis: 0;
+  height: 34px;
+  border-radius: 8px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--muted);
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.degrees {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.degrees span {
+  border-radius: 8px;
+  padding: 2px 8px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  background: var(--surface-2);
+}
+
+.degrees .altered {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.related {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.related button {
+  min-height: 44px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-radius: var(--r-md);
+  padding: 6px 12px;
+  text-align: start;
+  font-size: 0.9rem;
+}
+
+.related b {
+  display: block;
+}
+
+.related span {
+  color: var(--muted);
+  font-size: 0.8rem;
+}

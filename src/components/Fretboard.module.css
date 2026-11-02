@@ -1,0 +1,55 @@
+.scroll {
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.neck {
+  position: relative;
+  min-width: 660px;
+  height: 210px;
+  background: var(--wood);
+  border-radius: 12px;
+}
+
+.neck svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.dot {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  margin: -15px 0 0 -15px;
+  padding: 0;
+  border-radius: 50%;
+  background: var(--c);
+  color: var(--on-note);
+  display: grid;
+  place-items: center;
+  font-size: 0.62rem;
+  font-weight: 700;
+  font-family: var(--f-display);
+  border: 2px solid transparent;
+  z-index: 3;
+  transition: transform 0.08s;
+}
+
+/* Bigger touch target than the dot itself. */
+.dot::after {
+  content: '';
+  position: absolute;
+  inset: -7px;
+}
+
+.root {
+  border-color: var(--on-note);
+}
+
+.cur {
+  transform: scale(1.3);
+  border-color: var(--ink);
+  z-index: 4;
+}

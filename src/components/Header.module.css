@@ -1,0 +1,50 @@
+.header {
+  grid-area: head;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.name {
+  font-family: var(--f-display);
+  font-weight: 700;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1;
+  margin: 0;
+}
+
+.bow {
+  display: inline-flex;
+  gap: 3px;
+  margin-inline-start: 10px;
+  vertical-align: middle;
+}
+
+.bow i {
+  width: 9px;
+  height: 26px;
+  border-radius: 5px;
+  display: block;
+}
+
+.tag {
+  color: var(--muted);
+  margin: 6px 0 0;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+@media (max-width: 900px) {
+  .tag {
+    display: none;
+  }
+
+  .header {
+    align-items: center;
+  }
+}

@@ -1,0 +1,33 @@
+.roots {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.root {
+  aspect-ratio: 1;
+  min-width: 44px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  background: var(--c);
+  color: var(--on-note);
+  font-family: var(--f-display);
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1;
+  display: grid;
+  place-content: center;
+  padding: 0;
+}
+
+.root small {
+  font-size: 0.66rem;
+  font-weight: 600;
+  opacity: 0.75;
+}
+
+.root[aria-pressed='true'] {
+  border-color: var(--ink);
+  transform: scale(1.06);
+}

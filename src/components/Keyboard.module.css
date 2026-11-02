@@ -1,0 +1,81 @@
+.keyboard {
+  position: relative;
+  height: 170px;
+  width: 100%;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.key {
+  position: absolute;
+  top: 0;
+  padding: 0 0 8px;
+  border: 1px solid var(--line);
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: var(--f-display);
+  font-weight: 600;
+  font-size: 0.78rem;
+  line-height: 1.1;
+  touch-action: manipulation;
+  overflow: hidden;
+}
+
+.white {
+  height: 100%;
+  background: var(--white-key);
+  color: var(--muted);
+  z-index: 1;
+}
+
+.black {
+  height: 60%;
+  background: var(--black-key);
+  color: #fff;
+  z-index: 2;
+  border-color: var(--black-key);
+  font-size: 0.6rem;
+  padding-bottom: 6px;
+}
+
+.in {
+  background: linear-gradient(to top, var(--c) 0 46%, var(--white-key) 46%);
+  color: var(--on-note);
+}
+
+.black.in {
+  background: linear-gradient(to top, var(--c) 0 55%, var(--black-key) 55%);
+}
+
+.root::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ink);
+}
+
+.black.root::after {
+  background: #fff;
+}
+
+.faint {
+  opacity: 0.5;
+}
+
+.cur {
+  background: var(--c);
+  color: var(--on-note);
+  box-shadow: inset 0 -6px 0 rgb(0 0 0 / 0.18);
+  transform: translateY(2px);
+}
+
+.mic {
+  outline: 3px solid var(--ink);
+  outline-offset: -3px;
+}

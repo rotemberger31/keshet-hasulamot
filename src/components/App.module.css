@@ -1,0 +1,56 @@
+.app {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-block: 18px 48px;
+  padding-inline: max(16px, env(safe-area-inset-left, 0px)) max(16px, env(safe-area-inset-right, 0px));
+  display: grid;
+  gap: 16px;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  grid-template-areas:
+    'head head'
+    'now side'
+    'main side';
+  grid-template-rows: auto auto 1fr;
+}
+
+.main,
+.side {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+  min-width: 0;
+}
+
+.main {
+  grid-area: main;
+}
+
+.side {
+  grid-area: side;
+}
+
+/* Phone: one column, and the note with the play button stays in reach. */
+@media (max-width: 900px) {
+  .app {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: 'head' 'now' 'main' 'side';
+    grid-template-rows: none;
+    padding-block-start: 10px;
+  }
+
+  .main {
+    display: contents;
+  }
+
+  .side {
+    grid-row: 6;
+  }
+
+  .main > :nth-child(3) {
+    grid-row: 7;
+  }
+
+  .main > :nth-child(4) {
+    grid-row: 8;
+  }
+}
